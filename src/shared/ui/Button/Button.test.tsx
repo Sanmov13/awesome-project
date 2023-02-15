@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import 'app/styles/index.scss';
 
 describe('Button', () => {
     test('On Screen', () => {
