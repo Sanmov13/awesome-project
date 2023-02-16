@@ -9,7 +9,7 @@ jobs:
   pipeline:
     runs-on: ubuntu-latest
 
-    strategy:
+  strategy:
       matrix:
         node-version: [ 17.x ]
 
