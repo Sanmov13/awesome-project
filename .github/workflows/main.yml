@@ -1,9 +1,9 @@
 name: linting, testing, buildinf
 on: 
   push: 
-    branches: [ master ]
+    branches: [ main ]
   pull_request: 
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -27,3 +27,4 @@ jobs:
       run: npm run lint:scss
     - name: unit testing
       run: npm run test:unit
+      
