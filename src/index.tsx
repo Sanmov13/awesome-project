@@ -1,3 +1,4 @@
+import 'app/styles/index.scss';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { render } from 'react-dom';
