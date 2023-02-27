@@ -1,8 +1,9 @@
-/* eslint-disable max-len */
 /* eslint-disable i18next/no-literal-string */
+import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUserName';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
@@ -16,7 +17,8 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
     const [isAuth, setIsAuth] = useState(false);
     const { t } = useTranslation();
-
+    const authData = useSelector(getUserAuthData);
+    const dispatch = useDispatch();
     const onCloseModal = useCallback(() => {
         setIsAuth(false);
     }, []);
@@ -24,6 +26,24 @@ export const Navbar = ({ className }: NavbarProps) => {
     const onOpenModal = useCallback(() => {
         setIsAuth(true);
     }, []);
+
+    const onLogOut = useCallback(() => {
+        dispatch(userActions.logout());
+    }, [dispatch]);
+
+    if (authData) {
+        return (
+            <div className={classNames(cls.Navbar, {}, [className])}>
+                <Button theme={ThemeButton.CLEAR_INVERTED} className={cls.links} onClick={onLogOut}>
+                    {t('Выйти')}
+                </Button>
+                <LoginModal
+                    isOpen={isAuth}
+                    onClose={onCloseModal}
+                />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
