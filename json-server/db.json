@@ -25,6 +25,15 @@
         "password": "123"
       }
     ],
-    "profile": { "name": "typicode" }
+    "profile": { 
+      "first": "Lecha" ,
+      "lastname": "Tapchaev",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Grozny",
+      "username": "admin",
+      "avatar": "https://media.idownloadblog.com/wp-content/uploads/2020/11/The-Mandalorian-wallpaper-OLED-iPhone-idownloadblog-90s-retro-purple.jpg"
+    }
   }
   
