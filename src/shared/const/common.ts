@@ -1,7 +1,7 @@
 export enum Currency {
-    "RUB" = "RUB",
-    "USD" = "USD",
-    "EUR" = "EUR"
+    'RUB' = 'RUB',
+    'USD' = 'USD',
+    'EUR' = 'EUR'
 }
 
 export enum Countries {
