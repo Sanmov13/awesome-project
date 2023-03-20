@@ -50,6 +50,7 @@ module.exports = {
         'max-len': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,
