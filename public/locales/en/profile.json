@@ -2,5 +2,8 @@
   "Edit": "Редактировать",
   "Your name": "Ваше имя",
   "Your lastname": "Ваша фамилия",
-  "User Profile": "Профиль пользователя"
+  "User Profile": "Профиль пользователя",
+  "Something went wrong": "Что-то пошло не так",
+  "Try to refresh page": "Попробуйте обновить страницу",
+  "Cancel": "Отменить"
 }
