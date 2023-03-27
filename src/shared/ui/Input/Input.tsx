@@ -7,7 +7,7 @@ import cls from './Input.module.scss';
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 
 interface InputProps extends HTMLInputProps{
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
     readonly?: boolean
     className?: string;

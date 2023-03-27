@@ -1,5 +1,5 @@
 import {
-    fetchProfileData, getProfileData, getProfileError, getProfileIsLoading, getProfileReadOnly, profileActions, ProfileCard, profileReducer,
+    fetchProfileData, getProfileError, getProfileForm, getProfileIsLoading, getProfileReadOnly, profileActions, ProfileCard, profileReducer,
 } from 'entities/Profile';
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -20,7 +20,7 @@ const reducers: ReducersList = {
 const ProfilePage = ({ className }: ProfilePageProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
-    const data = useSelector(getProfileData);
+    const formData = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
     const isLoading = useSelector(getProfileIsLoading);
     const readonly = useSelector(getProfileReadOnly);
@@ -30,11 +30,19 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }, [dispatch]);
 
     const onChangeFirstname = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfle({ first: value || '' }));
+        dispatch(profileActions.updateProfile({ first: value || '' }));
     }, [dispatch]);
 
     const onChangeLastname = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfle({ lastname: value || '' }));
+        dispatch(profileActions.updateProfile({ lastname: value || '' }));
+    }, [dispatch]);
+
+    const onChangeCity = useCallback((value?: string) => {
+        dispatch(profileActions.updateProfile({ city: value || '' }));
+    }, [dispatch]);
+
+    const onChangeAge = useCallback((value?: string) => {
+        dispatch(profileActions.updateProfile({ age: Number(value || '') }));
     }, [dispatch]);
 
     return (
@@ -42,11 +50,13 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 <ProfileCard
-                    data={data}
+                    data={formData}
                     isLoading={isLoading}
                     error={error}
                     onChangeFirstname={onChangeFirstname}
                     onChangeLastname={onChangeLastname}
+                    onChangeAge={onChangeAge}
+                    onChangeCity={onChangeCity}
                     readonly={readonly}
                 />
             </div>

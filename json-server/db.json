@@ -1,39 +1,34 @@
 {
-    "posts": [
-      {
-        "id": "1",
-        "title": "json-server",
-        "userId": 1
-      },
-      {
-        "id": "2",
-        "title": "json-server",
-        "userId": 2
-      }
-    ],
-    "comments": [
-      {
-        "id": "1",
-        "body": "some comment",
-        "postId": 1
-      }
-    ],
-    "users": [
-      {
-        "id": "1",
-        "username": "admin",
-        "password": "123"
-      }
-    ],
-    "profile": { 
-      "first": "Lecha" ,
-      "lastname": "Tapchaev",
-      "age": 24,
-      "currency": "RUB",
-      "country": "Russia",
-      "city": "Grozny",
-      "username": "admin",
-      "avatar": "https://media.idownloadblog.com/wp-content/uploads/2020/11/The-Mandalorian-wallpaper-OLED-iPhone-idownloadblog-90s-retro-purple.jpg"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": 2
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "lastname": "ccck",
+    "city": "cccrl",
+    "age": 5,
+    "first": "ccccck"
   }
-  
+}
