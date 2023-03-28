@@ -1,5 +1,7 @@
+/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
@@ -11,10 +13,12 @@ interface ProfileCardProps {
     error?: string;
     isLoading?: boolean,
     readonly?: boolean,
-    onChangeFirstname: (value?: string) => void
-    onChangeLastname: (value?: string) => void
-    onChangeCity: (value?: string) => void
-    onChangeAge: (value?: string) => void
+    onChangeFirstname?: (value?: string) => void
+    onChangeLastname?: (value?: string) => void
+    onChangeCity?: (value?: string) => void
+    onChangeAge?: (value?: string) => void
+    onChangeAvatar?: (value?: string) => void
+    onChangeUsername?: (value?: string) => void
     className?: string;
 }
 
@@ -29,6 +33,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeLastname,
         onChangeCity,
         onChangeAge,
+        onChangeAvatar,
+        onChangeUsername,
     } = props;
     const { t } = useTranslation('profile');
 
@@ -57,6 +63,15 @@ export const ProfileCard = (props: ProfileCardProps) => {
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>
             <div className={cls.data}>
+                {
+                    data?.avatar
+                && (
+                    <div className={cls.avatrWrapper}>
+
+                        <Avatar size={150} src={data?.avatar} alt="surt" />
+                    </div>
+                )
+                }
                 <Input
                     className={cls.input}
                     value={data?.first}
@@ -84,6 +99,20 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     placeholder={t('Your city')}
                     readonly={readonly}
                     onChange={onChangeCity}
+                />
+                <Input
+                    className={cls.input}
+                    value={data?.avatar}
+                    placeholder={t('Your avatar')}
+                    readonly={readonly}
+                    onChange={onChangeAvatar}
+                />
+                <Input
+                    className={cls.input}
+                    value={data?.username}
+                    placeholder={t('Your useraname')}
+                    readonly={readonly}
+                    onChange={onChangeUsername}
                 />
             </div>
         </div>
