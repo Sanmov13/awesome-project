@@ -1,9 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Currency } from 'shared/const/common';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { Select } from 'shared/ui/Select/Select';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Profile } from '../../model/types/Profile';
 import cls from './ProfileCard.module.scss';
@@ -60,8 +62,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
         );
     }
 
+    const mods: Mods = {
+        [cls.editing]: readonly,
+    };
+
     return (
-        <div className={classNames(cls.ProfileCard, {}, [className])}>
+        <div className={classNames(cls.ProfileCard, mods, [className])}>
             <div className={cls.data}>
                 {
                     data?.avatar
@@ -113,6 +119,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     placeholder={t('Your useraname')}
                     readonly={readonly}
                     onChange={onChangeUsername}
+                />
+                <Select
+                    label="Укажите валюту"
+                    options={[
+                        { value: Currency.RUB, content: Currency.RUB },
+                        { value: Currency.EUR, content: Currency.EUR },
+                        { value: Currency.USD, content: Currency.USD },
+                    ]}
                 />
             </div>
         </div>
