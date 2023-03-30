@@ -1,28 +1,28 @@
 import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
-import { Countries } from '../model/types/Country';
+import { Country } from '../model/types/Country';
 
 interface CountrySelectProps {
     value?: string;
-    onChange?: (value: Countries) => void;
+    onChange?: (value: Country) => void;
     className?: string;
     readonly?: boolean;
 }
 
 const options = [
-    { value: Countries.Armenia, content: Countries.Armenia },
-    { value: Countries.Belarus, content: Countries.Belarus },
-    { value: Countries.Canada, content: Countries.Canada },
-    { value: Countries.Russia, content: Countries.Russia },
-    { value: Countries.USA, content: Countries.USA },
+    { value: Country.Armenia, content: Country.Armenia },
+    { value: Country.Belarus, content: Country.Belarus },
+    { value: Country.Canada, content: Country.Canada },
+    { value: Country.Russia, content: Country.Russia },
+    { value: Country.USA, content: Country.USA },
 ];
 
 export const CountrySelect = memo(({
     className, value, onChange, readonly,
 }: CountrySelectProps) => {
     const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Countries);
+        onChange?.(value as Country);
     }, [onChange]);
 
     return (

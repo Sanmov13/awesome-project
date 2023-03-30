@@ -1,4 +1,4 @@
-import { Countries } from 'entities/Country/model/types/Country';
+import { Country } from 'entities/Country/model/types/Country';
 import { Currency } from 'entities/Currency';
 import {
     fetchProfileData, getProfileError, getProfileForm, getProfileIsLoading, getProfileReadOnly, profileActions, ProfileCard, profileReducer,
@@ -59,7 +59,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         dispatch(profileActions.updateProfile({ currency }));
     }, [dispatch]);
 
-    const onChangeCountry = useCallback((country: Countries) => {
+    const onChangeCountry = useCallback((country: Country) => {
         dispatch(profileActions.updateProfile({ country }));
     }, [dispatch]);
 

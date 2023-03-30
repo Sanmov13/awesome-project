@@ -1,6 +1,6 @@
 /* eslint-disable i18next/no-literal-string */
 import { CountrySelect } from 'entities/Country';
-import { Countries } from 'entities/Country/model/types/Country';
+import { Country } from 'entities/Country/model/types/Country';
 import { Currency, CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
@@ -23,7 +23,7 @@ interface ProfileCardProps {
     onChangeAvatar?: (value?: string) => void
     onChangeUsername?: (value?: string) => void
     onChangeCurrency?: (currency: Currency) => void
-    onChangeCountry?: (country: Countries) => void
+    onChangeCountry?: (country: Country) => void
     className?: string;
 }
 
