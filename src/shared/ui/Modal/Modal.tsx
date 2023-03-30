@@ -6,11 +6,11 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
-className?: string;
-children?: ReactNode;
-isOpen?: boolean,
-onClose?: () => void,
-lazy?: boolean,
+    children?: ReactNode;
+    isOpen?: boolean,
+    onClose?: () => void,
+    lazy?: boolean,
+    className?: string;
 }
 
 export const Modal = (props: ModalProps) => {

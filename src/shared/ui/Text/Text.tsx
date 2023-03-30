@@ -13,11 +13,11 @@ export enum TextAlign {
     CENTER = 'CENTER'
 }
 interface TextProps {
-className?: string;
-title?: string,
-text?:string,
-theme?: TextTheme,
-align?: TextAlign
+    title?: string,
+    text?:string,
+    theme?: TextTheme,
+    align?: TextAlign
+    className?: string;
 }
 
 export const Text = memo((props : TextProps) => {
