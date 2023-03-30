@@ -9,7 +9,7 @@ import { Text } from 'shared/ui/Text/Text';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
-className?: string;
+    className?: string;
 }
 
 export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {

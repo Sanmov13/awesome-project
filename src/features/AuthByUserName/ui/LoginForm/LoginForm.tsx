@@ -17,8 +17,8 @@ import { loginByUserName } from '../../model/services/loginByUserName/loginByUse
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-className?: string;
-onSucces: () => void;
+    onSucces: () => void;
+    className?: string;
 }
 
 const initialreducers: ReducersList = {
