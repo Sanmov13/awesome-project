@@ -31,6 +31,8 @@
     "age": 25,
     "first": "Lecha",
     "username": "Tapch",
-    "avatar": "https://cdn.forbes.ru/forbes-static/new/2022/11/4-636273af4beec.jpg"
+    "avatar": "https://cdn.forbes.ru/forbes-static/new/2022/11/4-636273af4beec.jpg",
+    "currency": "USD",
+    "country": "Canada"
   }
 }
