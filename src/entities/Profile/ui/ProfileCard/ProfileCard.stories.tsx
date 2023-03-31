@@ -14,19 +14,19 @@ export default {
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    data: {
-        first: 'Lecha',
-        lastname: 'Tapchaev',
-        age: 25,
-        city: 'Grozny',
-        avatar: avatarImg,
-        username: 'Tapch',
-        currency: Currency.USD,
-        country: Country.Canada,
-    },
-};
+// export const Primary = Template.bind({});
+// Primary.args = {
+//     data: {
+//         first: 'Lecha',
+//         lastname: 'Tapchaev',
+//         age: 25,
+//         city: 'Grozny',
+//         avatar: avatarImg,
+//         username: 'Tapch',
+//         currency: Currency.USD,
+//         country: Country.Canada,
+//     },
+// };
 
 export const PrimaryWithError = Template.bind({});
 PrimaryWithError.args = {
