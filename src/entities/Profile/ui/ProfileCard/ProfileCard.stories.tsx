@@ -1,8 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Country } from 'entities/Country/model/types/Country';
 import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from 'entities/Profile/model/types/Profile';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import avatarImg from 'shared/assets/icons/avatarImg.jpg';
 import { ProfileCard } from './ProfileCard';
 
