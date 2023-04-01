@@ -1,9 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
-import { Suspense, useEffect, useState } from 'react';
-import { Modal } from 'shared/ui/Modal/Modal';
-import { useTranslation } from 'react-i18next';
+import { Suspense, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
 import { AppRouter } from './providers/router';
