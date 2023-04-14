@@ -1,13 +1,16 @@
 import { classNames } from "shared/lib/classNames/classNames"
-import cls from "./[FTName].module.scss"
+import cls from "./[FTName].module.scss";
+import { useTranslation } from 'react-i18next';
 interface [FTName]Props {
 className?: string;
 }
 
 export const [FTName] = ({ className }: [FTName]Props) => {
-return (
-<div className={classNames(cls.[FTName], {}, [])}>
+    const { t } = useTranslation()
 
-</div>
+    return (
+        <div className={classNames(cls.[FTName], {}, [className])}>
+
+        </div>
 )
 }

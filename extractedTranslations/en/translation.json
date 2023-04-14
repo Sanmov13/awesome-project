@@ -1,7 +1,12 @@
 {
   "": "",
+  "ARTICLE DETAILS": "ARTICLE DETAILS",
   "Cancel": "Cancel",
   "Edit": "Edit",
+  "Error ": "Error ",
+  "Error with loadi": "Error with loadi",
+  "Error with loading article": "Error with loading article",
+  "Errr=or": "Errr=or",
   "PROFILE PAGE": "PROFILE PAGE",
   "Save": "Save",
   "Something went wrong": "Something went wrong",
@@ -37,8 +42,10 @@
   "Обновить страницу": "Обновить страницу",
   "Произошла ошибка": "Произошла ошибка",
   "Произошла ошибка при загрузке": "Произошла ошибка при загрузке",
+  "Произошла ошибка при загрузке статьи": "Произошла ошибка при загрузке статьи",
   "Профиль пользователя": "Профиль пользователя",
   "Русский": "",
+  "Статья не найдена": "Статья не найдена",
   "Страница не найдена": "Страница не найдена",
   "Фло": "",
   "Форма авторизаци": ""
